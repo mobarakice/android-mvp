@@ -7,5 +7,5 @@ package com.atomapgroup.baseproject.data.db;
  * @author Atom AP Ltd.
  */
 
-public interface IDbHelper {
+public interface IDbHelper extends UserDao {
 }

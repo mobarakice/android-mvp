@@ -12,6 +12,8 @@ import com.atomapgroup.baseproject.data.network.IResponseCallback;
 import com.atomapgroup.baseproject.data.prefs.IPreferenceHelper;
 import com.atomapgroup.baseproject.data.prefs.PreferenceManager;
 
+import java.util.List;
+
 /**
  * This is singleton DataManager class and used to manipulate all kinds of data
  * Created by Mobarak on 09-Feb-18.
@@ -112,5 +114,40 @@ public class DataManager implements IPreferenceHelper, IApiHelper, IDbHelper {
     @Override
     public void invokeLogoutAPI(@NonNull IResponseCallback callback, @NonNull String userId) {
         mApiHelper.invokeLogoutAPI(callback, userId);
+    }
+
+    @Override
+    public List<User> getAll() {
+        return mDbHelper.getAll();
+    }
+
+    @Override
+    public List<User> loadAllByIds(int[] userIds) {
+        return mDbHelper.loadAllByIds(userIds);
+    }
+
+    @Override
+    public User findByName(String name) {
+        return mDbHelper.findByName(name);
+    }
+
+    @Override
+    public void insertAll(User... users) {
+        mDbHelper.insertAll(users);
+    }
+
+    @Override
+    public void insert(User user) {
+        mDbHelper.insert(user);
+    }
+
+    @Override
+    public void delete(User user) {
+        mDbHelper.delete(user);
+    }
+
+    @Override
+    public void update(User user) {
+        mDbHelper.update(user);
     }
 }
