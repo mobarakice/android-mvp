@@ -46,33 +46,6 @@ public interface IRetroApiHelper {
     @POST(ApiUrls.LOGIN_API_URL)
     Call<LoginResponse> invokeLoginApi(@Body LoginRequest body);
 
-    @POST(ApiUrls.LOGOUT_API_URL)
-    Call<BaseResponse> invokeLogoutApi(@Body LogoutRequest body);
-
-    @POST(ApiUrls.REGISTRATION_API_URL)
-    Call<LoginResponse> invokeRegistrationApi(@Body RegistrationRequest body);
-
-    @POST(ApiUrls.FORGET_PASSWORD_API_URL)
-    Call<ForgetPasswordResponse> invokeForgePasswordApi(@Body ForgetPasswordRequest body);
-
-    @POST(ApiUrls.CHANGE_PASSWORD_API_URL)
-    Call<ChangePasswordResponse> invokeChangePasswordApi(@Body ChangePasswordRequest body);
-
-    @POST(ApiUrls.RECIPE_LIST_API_URL)
-    Call<RecipeListResponse> invokeRecipeListApi(@Body RecipeListRequest body);
-
-    @POST(ApiUrls.RECIPE_DETAILS_API_URL)
-    Call<RecipeDetailsResponse> invokeRecipeDetailsApi(@Body RecipeDetailsRequest body);
-
-    @POST(ApiUrls.MY_PROFILE_API_URL)
-    Call<ProfileViewResponse> invokeProfileViewApi(@Body ProfileViewRequest body);
-
-    @POST(ApiUrls.UPDATE_PROFILE_API_URL)
-    Call<ProfileUpdateResponse> invokeProfileUpdateApi(@Body ProfileUpdateRequest body);
-
-    @POST(ApiUrls.LOAD_CREATE_RECIPE_INFO_API_URL)
-    Call<LoadCreateRecipeInfoResponse> invokeLoadCreateRecipeInfoApi(@Body LoadCreateRecipeInfoRequest body);
-
     @Multipart
     @POST(ApiUrls.CREATE_RECIPE_API_URL)
     Call<BaseResponse> invokeCreateRecipeApi(
@@ -82,8 +55,5 @@ public interface IRetroApiHelper {
 
     @POST(ApiUrls.SEARCH_SUGGESSION_API_URL)
     Call<SuggessionRecipeResponse> invokeSearchSuggessionApi(@Body BaseRequest body);
-
-    @POST(ApiUrls.SEARCH_API_URL)
-    Call<SearchRecipeResponse> invokeSearchApi(@Body SearchRecipeRequest body);
 
 }
