@@ -19,12 +19,17 @@ public class ApiManager implements IApiHelper {
      * Global instance of ApiManager
      */
     private static ApiManager mInstance;
+    
+     /**
+     * Global retrofit client
+     */
+    private static IRetroApiHelper retroApiHelper;
 
     /**
      * Default private constructor
      */
     private ApiManager() {
-
+     //   retroApiHelper = ApiClient.createApiClient(IRetroApiHelper.class);
     }
 
     /**
@@ -39,6 +44,17 @@ public class ApiManager implements IApiHelper {
         }
         return mInstance;
     }
+    /*
+      /**
+     * Invok to call vendor login API
+     *
+     * @param callback IRetroResponseCallback
+     * @param body
+     *
+    @Override
+    public void invokeLoginApi(LoginRequest body, IRetroResponseCallback callback) {
+        new ResponseParser(callback).getResponse(retroApiHelper.invokeLoginApi(body));
+    }*/
 
     /**
      * Invok to call vendor login API
